@@ -1,0 +1,98 @@
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f6f6f8;
+}
+
+.head {
+    border-radius: 16px 16px 0 0;
+    background-color: #e0dad4;
+    padding: 16px 0;
+    position: relative;
+}
+
+.head a {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+}
+
+.head h1 {
+    color: #9b9691;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 32px;
+    padding: 0;
+    margin: 0;
+}
+
+.numpad {
+    border-radius: 16px;
+    background-color: #706b69;
+    padding: 32px 24px;
+    min-height: 412px;
+}
+
+.numpad__numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    max-width: 320px;
+}
+.numpad__numbers .btn-num:last-child {
+    grid-column: 2/3;
+}
+
+.numpad__actions {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.numpad__actions .btn {
+    height: 48px;
+    width: 128px;
+    text-transform: uppercase;
+}
+
+.numpad__actions .btn-confirm {
+    height: 64px;
+}
+
+.screen {
+    background-color: rgb(230,231,233);
+    padding: 24px;
+    border-radius: 0 0 16px 16px;
+    min-height: 342px;
+}
+
+.screen table {
+    margin: 0;
+}
+
+.screen table td,
+.screen table th {
+    background-color: transparent;
+    height: 56px;
+    vertical-align: middle;
+    border: none;
+}
+
+.screen table th {
+    width: 120px;
+    text-align: right;
+}
+
+.screen .input-group {
+    max-width: 320px;
+}
+
+.screen input {
+    background-color: transparent;
+    border-color: black;
+}
