@@ -11,7 +11,6 @@ public class ApplicationConfig extends Application {
     public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new java.util.HashSet<>();
         resources.add(ElectionResource.class);
-//        resources.add(StaticResource.class);
         return resources;
 
     }

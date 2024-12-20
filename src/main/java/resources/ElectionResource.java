@@ -11,22 +11,10 @@ import repositories.CandidateRepository;
 import repositories.PoliticalPartyRepository;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 @Path("")
 public class ElectionResource {
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("candidates")
-    public Response candidates() {
-        CandidateRepository repository = new CandidateRepository();
-        List<Candidate> list = repository.findAll();
-
-        return Response.ok(list).build();
-    }
-
     @GET
     @Produces(MediaType.APPLICATION_XML)
     @Path("candidates/{number}")
@@ -39,16 +27,6 @@ public class ElectionResource {
         }
 
         return Response.ok(candidate).build();
-    }
-
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("political-parties")
-    public Response politicalParties() {
-        PoliticalPartyRepository repository = new PoliticalPartyRepository();
-        List<PoliticalParty> list = repository.findAll();
-
-        return Response.ok(list).build();
     }
 
     @GET

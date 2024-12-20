@@ -46,7 +46,7 @@ class VotingMachine {
             .then(response => response.text())
             .then((candidate) => {
                 if (!candidate) {
-                    this._candidateEl.innerHTML = `<span class="text-danger">Candidate inválido</span>`;
+                    this._candidateEl.innerHTML = `<span class="text-danger">Candidato inválido</span>`;
                 } else {
                     const parser = new DOMParser();
                     const doc = parser.parseFromString(candidate, "application/xml");
